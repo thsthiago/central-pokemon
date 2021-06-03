@@ -38,6 +38,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    padding: 0 2%;
 
     button {
       background: transparent;
@@ -53,7 +54,7 @@ export const Container = styled.div`
     > div {
       width: 100%;
       max-width: 800px;
-      min-height: 750px;
+      height: 80%;
       background: ${(props) => (props.color ? props.color : '#E9FE6B')};
       border-radius: 50px 50px 0px 0px;
       text-align: center;
@@ -96,6 +97,10 @@ export const Container = styled.div`
           flex-direction: column;
           align-items: center;
 
+          @media (max-width: 600px) {
+            font-size: 16px;
+          }
+
           strong:first-of-type {
             color: #777777;
             padding-bottom: 5px;
@@ -115,6 +120,37 @@ export const Container = styled.div`
           justify-content: center;
           gap: 50px;
           flex-wrap: wrap;
+        }
+      }
+
+      @media (max-width: 540px) {
+        > div {
+          margin-top: 80px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        height: 85%;
+
+        > div {
+          padding-top: 30px;
+        }
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      button {
+        background: transparent;
+        position: absolute;
+        top: 30px;
+        right: 5%;
+
+        img {
+          width: 25px;
         }
       }
     }

@@ -57,15 +57,6 @@ export const DescricaoPokemon = () => {
                 <strong>{pokemon.stats[5].base_stat}</strong>
               </p>
             </div>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et
-              neque id mauris vestibulum bibendum. Phasellus enim diam,
-              pellentesque ac feugiat in, ullamcorper ut odio. Aenean hendrerit
-              pharetra vehicula. In rhoncus pulvinar odio sed tempus. Vivamus eu
-              libero sed nibh condimentum hendrerit. Duis vel faucibus magna.
-              Praesent non elit eu lectus iaculis.
-            </p>
           </div>
         </div>
       </div>

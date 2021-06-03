@@ -1,3 +1,3 @@
-# Central PoKémon
+# Central Pokémon
 
 ---

@@ -12,13 +12,13 @@ export const ListPokemon = () => {
     api
       .getPokemonsList()
       .then((response) => {
-        const primeirosPokemons = response.results.splice(0, 12)
+        const primeirosPokemons = response.results.slice(0, 12)
         setPokemons(primeirosPokemons)
 
         api
           .getPokemonColorsList()
           .then((response) => {
-            const primeirasColors = response.results.splice(0, 12)
+            const primeirasColors = response.results.slice(0, 12)
             response.results !== [] && setColors(primeirasColors)
           })
           .catch((err) => console.log(err))
