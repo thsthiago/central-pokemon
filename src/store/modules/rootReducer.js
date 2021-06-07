@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import descricaoPokemon from './descPokemon/reducer'
-import dataPokemon from './dataPokemon/reducer'
+import infoPokemon from './infoPokemon/reducer'
+import colorsPokemons from './colorsPokemons/reducers'
 
 export default combineReducers({
-  dataPokemon,
-  descricaoPokemon
+  infoPokemon,
+  descricaoPokemon,
+  colorsPokemons
 })

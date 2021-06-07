@@ -57,7 +57,7 @@ export const Nav = styled.header`
       span {
         position: absolute;
         bottom: -10px;
-        left: ${(props) => (props.nav ? '0%' : '79%')};
+        left: ${(props) => (props.nav === '/' ? '0%' : '79%')};
         width: ${(props) => `${props.span}px`};
         height: 3px;
         background: white;

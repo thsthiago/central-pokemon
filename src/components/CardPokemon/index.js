@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import nameUpperCase from '../../utils/nameUpperCase'
 
 import * as descPokemon from '../../store/modules/descPokemon/actions'
-import * as dataPokemon from '../../store/modules/dataPokemon/actions'
+import * as infoPokemon from '../../store/modules/infoPokemon/actions'
 import { useCallback, useEffect, useState } from 'react'
 import api from '../../services/api'
 
@@ -14,7 +14,7 @@ export const CardPokemon = ({ name, color }) => {
 
   const handlesDescricao = useCallback(() => {
     dispath(descPokemon.activeDesc())
-    dispath(dataPokemon.dataPokemon({ ...pokemon, color: color }))
+    dispath(infoPokemon.infoPokemon({ ...pokemon, color: color }))
   }, [pokemon, color])
 
   useEffect(() => {
@@ -26,8 +26,6 @@ export const CardPokemon = ({ name, color }) => {
       })
       .catch((err) => console.log(err))
   }, [])
-
-  if (!pokemon) return <Container />
 
   return pokemon ? (
     <Container
@@ -53,6 +51,6 @@ export const CardPokemon = ({ name, color }) => {
       </div>
     </Container>
   ) : (
-    <div />
+    <Container />
   )
 }

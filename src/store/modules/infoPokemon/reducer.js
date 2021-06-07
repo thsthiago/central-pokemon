@@ -1,12 +1,12 @@
-import { DATA_POKEMON } from '../types'
+import { INFO_POKEMON } from '../types'
 
 const initialState = {
-  dataPokemon: {}
+  infoPokemon: {}
 }
 
-export default function dataPokemon(state = initialState, action) {
+export default function infoPokemon(state = initialState, action) {
   switch (action.type) {
-    case DATA_POKEMON: {
+    case INFO_POKEMON: {
       const { pokemon } = action
       return {
         pokemon

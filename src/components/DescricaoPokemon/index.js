@@ -6,7 +6,7 @@ import nameUpperCase from '../../utils/nameUpperCase'
 
 export const DescricaoPokemon = () => {
   const dispath = useDispatch()
-  const pokemon = useSelector((state) => state.dataPokemon.pokemon)
+  const pokemon = useSelector((state) => state.infoPokemon.pokemon)
 
   const handlesDescricao = useCallback(() => {
     dispath(descPokemon.activeDesc())
